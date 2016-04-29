@@ -19,7 +19,10 @@
 		134B55401CD3313300C5F8E0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B553F1CD3313300C5F8E0 /* TableViewController.m */; };
 		134B55461CD333B700C5F8E0 /* EAFeatureItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B55431CD333B700C5F8E0 /* EAFeatureItem.m */; };
 		134B55471CD333B700C5F8E0 /* UIView+EAFeatureGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B55451CD333B700C5F8E0 /* UIView+EAFeatureGuideView.m */; };
-		134B55491CD3664000C5F8E0 /* EAFeatureGuideResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 134B55481CD3664000C5F8E0 /* EAFeatureGuideResources.bundle */; };
+		13C652D01CD37B9900D50C0E /* icon_ea_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C652CC1CD37B9900D50C0E /* icon_ea_background@2x.png */; };
+		13C652D11CD37B9900D50C0E /* icon_ea_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C652CD1CD37B9900D50C0E /* icon_ea_background@3x.png */; };
+		13C652D21CD37B9900D50C0E /* icon_ea_indicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C652CE1CD37B9900D50C0E /* icon_ea_indicator@2x.png */; };
+		13C652D31CD37B9900D50C0E /* icon_ea_indicator@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C652CF1CD37B9900D50C0E /* icon_ea_indicator@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +65,10 @@
 		134B55431CD333B700C5F8E0 /* EAFeatureItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAFeatureItem.m; sourceTree = "<group>"; };
 		134B55441CD333B700C5F8E0 /* UIView+EAFeatureGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EAFeatureGuideView.h"; sourceTree = "<group>"; };
 		134B55451CD333B700C5F8E0 /* UIView+EAFeatureGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EAFeatureGuideView.m"; sourceTree = "<group>"; };
-		134B55481CD3664000C5F8E0 /* EAFeatureGuideResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EAFeatureGuideResources.bundle; sourceTree = "<group>"; };
+		13C652CC1CD37B9900D50C0E /* icon_ea_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_ea_background@2x.png"; sourceTree = "<group>"; };
+		13C652CD1CD37B9900D50C0E /* icon_ea_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_ea_background@3x.png"; sourceTree = "<group>"; };
+		13C652CE1CD37B9900D50C0E /* icon_ea_indicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_ea_indicator@2x.png"; sourceTree = "<group>"; };
+		13C652CF1CD37B9900D50C0E /* icon_ea_indicator@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_ea_indicator@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,13 +165,24 @@
 		134B55411CD333B700C5F8E0 /* EAFeatureGuideView */ = {
 			isa = PBXGroup;
 			children = (
-				134B55481CD3664000C5F8E0 /* EAFeatureGuideResources.bundle */,
+				13C652CB1CD37B9900D50C0E /* Resources */,
 				134B55421CD333B700C5F8E0 /* EAFeatureItem.h */,
 				134B55431CD333B700C5F8E0 /* EAFeatureItem.m */,
 				134B55441CD333B700C5F8E0 /* UIView+EAFeatureGuideView.h */,
 				134B55451CD333B700C5F8E0 /* UIView+EAFeatureGuideView.m */,
 			);
 			path = EAFeatureGuideView;
+			sourceTree = "<group>";
+		};
+		13C652CB1CD37B9900D50C0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13C652CC1CD37B9900D50C0E /* icon_ea_background@2x.png */,
+				13C652CD1CD37B9900D50C0E /* icon_ea_background@3x.png */,
+				13C652CE1CD37B9900D50C0E /* icon_ea_indicator@2x.png */,
+				13C652CF1CD37B9900D50C0E /* icon_ea_indicator@3x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,11 +288,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C652D31CD37B9900D50C0E /* icon_ea_indicator@3x.png in Resources */,
+				13C652D11CD37B9900D50C0E /* icon_ea_background@3x.png in Resources */,
+				13C652D21CD37B9900D50C0E /* icon_ea_indicator@2x.png in Resources */,
 				134B55301CD2F09200C5F8E0 /* LaunchScreen.storyboard in Resources */,
 				134B55291CD2F08800C5F8E0 /* Assets.xcassets in Resources */,
 				134B553A1CD2F0B500C5F8E0 /* Info.plist in Resources */,
+				13C652D01CD37B9900D50C0E /* icon_ea_background@2x.png in Resources */,
 				134B55311CD2F09200C5F8E0 /* Main.storyboard in Resources */,
-				134B55491CD3664000C5F8E0 /* EAFeatureGuideResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

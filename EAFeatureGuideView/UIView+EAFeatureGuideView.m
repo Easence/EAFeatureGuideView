@@ -172,7 +172,7 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
     //添加箭头
     if(featureItem.action || featureItem.introduce)
     {
-        NSString *imageName = featureItem.indicatorImageName ?: @"EAFeatureGuideResources.bundle/icon_ea_indicator";
+        NSString *imageName = featureItem.indicatorImageName ?: @"icon_ea_indicator";
         
         UIImage *indicatorImage = [UIImage imageNamed:imageName];
         
@@ -226,7 +226,7 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
         if(featureItem.action || featureItem.actionTitle)
         {
             button = [[UIButton alloc] init];
-            [button setBackgroundImage:[[UIImage imageNamed:featureItem.buttonBackgroundImageName ?:  @"EAFeatureGuideResources.bundle/icon_ea_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)] forState:UIControlStateNormal];
+            [button setBackgroundImage:[[UIImage imageNamed:featureItem.buttonBackgroundImageName ?:  @"icon_ea_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)] forState:UIControlStateNormal];
             button.titleLabel.font = [UIFont systemFontOfSize:15];
             
             if(featureItem.actionTitle.length <= 0)
