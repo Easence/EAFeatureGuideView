@@ -12,7 +12,6 @@
 		134B55211CD2F07A00C5F8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B55201CD2F07A00C5F8E0 /* main.m */; };
 		134B55281CD2F08800C5F8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B55231CD2F08800C5F8E0 /* AppDelegate.m */; };
 		134B55291CD2F08800C5F8E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 134B55241CD2F08800C5F8E0 /* Assets.xcassets */; };
-		134B552A1CD2F08800C5F8E0 /* EAFeatureGuidView.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 134B55251CD2F08800C5F8E0 /* EAFeatureGuidView.xcassets */; };
 		134B552B1CD2F08800C5F8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B55271CD2F08800C5F8E0 /* ViewController.m */; };
 		134B55301CD2F09200C5F8E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134B552C1CD2F09200C5F8E0 /* LaunchScreen.storyboard */; };
 		134B55311CD2F09200C5F8E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134B552E1CD2F09200C5F8E0 /* Main.storyboard */; };
@@ -20,6 +19,7 @@
 		134B55401CD3313300C5F8E0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B553F1CD3313300C5F8E0 /* TableViewController.m */; };
 		134B55461CD333B700C5F8E0 /* EAFeatureItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B55431CD333B700C5F8E0 /* EAFeatureItem.m */; };
 		134B55471CD333B700C5F8E0 /* UIView+EAFeatureGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 134B55451CD333B700C5F8E0 /* UIView+EAFeatureGuideView.m */; };
+		134B55491CD3664000C5F8E0 /* EAFeatureGuideResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 134B55481CD3664000C5F8E0 /* EAFeatureGuideResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		134B55221CD2F08800C5F8E0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EAFeatureGuideDemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		134B55231CD2F08800C5F8E0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EAFeatureGuideDemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		134B55241CD2F08800C5F8E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = EAFeatureGuideDemo/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		134B55251CD2F08800C5F8E0 /* EAFeatureGuidView.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = EAFeatureGuidView.xcassets; path = EAFeatureGuideDemo/EAFeatureGuidView.xcassets; sourceTree = SOURCE_ROOT; };
 		134B55261CD2F08800C5F8E0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = EAFeatureGuideDemo/ViewController.h; sourceTree = SOURCE_ROOT; };
 		134B55271CD2F08800C5F8E0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = EAFeatureGuideDemo/ViewController.m; sourceTree = SOURCE_ROOT; };
 		134B552D1CD2F09200C5F8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EAFeatureGuideDemo/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -63,6 +62,7 @@
 		134B55431CD333B700C5F8E0 /* EAFeatureItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAFeatureItem.m; sourceTree = "<group>"; };
 		134B55441CD333B700C5F8E0 /* UIView+EAFeatureGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EAFeatureGuideView.h"; sourceTree = "<group>"; };
 		134B55451CD333B700C5F8E0 /* UIView+EAFeatureGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EAFeatureGuideView.m"; sourceTree = "<group>"; };
+		134B55481CD3664000C5F8E0 /* EAFeatureGuideResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EAFeatureGuideResources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,6 @@
 				134B553E1CD3313300C5F8E0 /* TableViewController.h */,
 				134B553F1CD3313300C5F8E0 /* TableViewController.m */,
 				134B55241CD2F08800C5F8E0 /* Assets.xcassets */,
-				134B55251CD2F08800C5F8E0 /* EAFeatureGuidView.xcassets */,
 				134B552C1CD2F09200C5F8E0 /* LaunchScreen.storyboard */,
 				134B552E1CD2F09200C5F8E0 /* Main.storyboard */,
 				134B55391CD2F0B500C5F8E0 /* Info.plist */,
@@ -160,6 +159,7 @@
 		134B55411CD333B700C5F8E0 /* EAFeatureGuideView */ = {
 			isa = PBXGroup;
 			children = (
+				134B55481CD3664000C5F8E0 /* EAFeatureGuideResources.bundle */,
 				134B55421CD333B700C5F8E0 /* EAFeatureItem.h */,
 				134B55431CD333B700C5F8E0 /* EAFeatureItem.m */,
 				134B55441CD333B700C5F8E0 /* UIView+EAFeatureGuideView.h */,
@@ -272,10 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				134B55301CD2F09200C5F8E0 /* LaunchScreen.storyboard in Resources */,
-				134B552A1CD2F08800C5F8E0 /* EAFeatureGuidView.xcassets in Resources */,
 				134B55291CD2F08800C5F8E0 /* Assets.xcassets in Resources */,
 				134B553A1CD2F0B500C5F8E0 /* Info.plist in Resources */,
 				134B55311CD2F09200C5F8E0 /* Main.storyboard in Resources */,
+				134B55491CD3664000C5F8E0 /* EAFeatureGuideResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +531,7 @@
 				134B54F31CD053B600C5F8E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		134B54F41CD053B600C5F8E0 /* Build configuration list for PBXNativeTarget "EAFeatureGuideTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +540,7 @@
 				134B54F61CD053B600C5F8E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		134B54F71CD053B600C5F8E0 /* Build configuration list for PBXNativeTarget "EAFeatureGuideUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +549,7 @@
 				134B54F91CD053B600C5F8E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -172,7 +172,9 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
     //添加箭头
     if(featureItem.action || featureItem.introduce)
     {
-        UIImage *indicatorImage = [UIImage imageNamed:@"icon_ea_indicator"];
+        NSString *imageName = featureItem.indicatorImageName ?: @"EAFeatureGuideResources.bundle/icon_ea_indicator";
+        
+        UIImage *indicatorImage = [UIImage imageNamed:imageName];
         
         
         CGSize imageSize = CGSizeMake(indicatorImage.size.width, indicatorImage.size.height);
@@ -210,9 +212,9 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
                 introduceLabel.numberOfLines = 0;
                 introduceLabel.text = featureItem.introduce;
                 
-                introduceLabel.font = [UIFont systemFontOfSize:13] ?: featureItem.introduceFont;
+                introduceLabel.font = featureItem.introduceFont ?: [UIFont systemFontOfSize:13];
                 
-                introduceLabel.textColor = [UIColor whiteColor] ?: featureItem.introduceTextColor;
+                introduceLabel.textColor = featureItem.introduceTextColor ?: [UIColor whiteColor];
                 
                 introduceView = introduceLabel;
             }
@@ -224,7 +226,7 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
         if(featureItem.action || featureItem.actionTitle)
         {
             button = [[UIButton alloc] init];
-            [button setBackgroundImage:[UIImage imageNamed:@"icon_ea_background"] forState:UIControlStateNormal];
+            [button setBackgroundImage:[[UIImage imageNamed:featureItem.buttonBackgroundImageName ?:  @"EAFeatureGuideResources.bundle/icon_ea_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)] forState:UIControlStateNormal];
             button.titleLabel.font = [UIFont systemFontOfSize:15];
             
             if(featureItem.actionTitle.length <= 0)
@@ -237,8 +239,8 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
             [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
             
             CGRect frame = button.frame;
-            frame.size.width += 32;
-            frame.size.height += 16;
+            frame.size.width += 20;
+            frame.size.height += 10;
             button.frame = frame;
             [containerView addSubview :button];
         }
@@ -472,6 +474,7 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
 
 + (BOOL)hasShowFeatureGuideWithKey:(NSString *)keyName version:(NSString *)version
 {
+    return NO;
     if(!keyName)
         return NO;
     

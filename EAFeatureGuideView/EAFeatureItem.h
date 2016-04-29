@@ -44,6 +44,10 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemAlignmentPriority) {
 //按钮的标题，默认是“知道了”，只有在action不为nil的才有效
 @property (nonatomic, copy) NSString *actionTitle;
 
+//指示符号的图片名称
+@property (nonatomic, copy) NSString *indicatorImageName;
+//生成的按钮的背景图片名称
+@property (nonatomic, copy) NSString *buttonBackgroundImageName;
 
 - (instancetype)initWithFocusView:(UIView *)focusView focusCornerRadius:(CGFloat) focusCornerRadius  focusInsets:(UIEdgeInsets) focusInsets;
 
