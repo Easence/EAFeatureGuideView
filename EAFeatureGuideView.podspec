@@ -106,7 +106,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "EAFeatureGuideView/EAFeatureGuideResources.bundle/*.png"
+  s.resources = "EAFeatureGuideView/EAFeatureGuideResources.bundle/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
