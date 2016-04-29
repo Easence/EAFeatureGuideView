@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EAFeatureGuideView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A easy way to show feature guide with EAFeatureGuideView."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Easence/EAFeatureGuideView.git", :tag => "1.0.1" }
+  s.source       = { :git => "https://github.com/Easence/EAFeatureGuideView.git", :tag => "1.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
