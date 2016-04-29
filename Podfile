@@ -1,0 +1,1 @@
+pod "EAFeatureGuideView",:git => "https://github.com/Easence/EAFeatureGuideView.git"
