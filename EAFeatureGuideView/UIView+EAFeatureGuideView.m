@@ -474,7 +474,6 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
 
 + (BOOL)hasShowFeatureGuideWithKey:(NSString *)keyName version:(NSString *)version
 {
-    return NO;
     if(!keyName)
         return NO;
     
