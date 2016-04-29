@@ -11,10 +11,11 @@ EAFeatureGuideView是UIView的一个扩展，用来做新功能引导提示，�
 ![效果图2](http://upload-images.jianshu.io/upload_images/1801567-fe1c6bb25ae34cd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ##如何使用
-首先在需要展示提示的页面引入头文件：
+如果安装了Cocoapods,可以在Podfile中加入如下代码：
+```pod 'EAFeatureGuideView'```,接着```pod install```一下。
+接着在需要展示提示的页面引入头文件：
 ```#import "UIView+EAFeatureGuideView.h"```
-
-然后构造多个EAFeatureItem对象，一个EAFeatureItem就对应可以高亮区域：
+最后添加如下代码：
 ```
 EAFeatureItem *item = [[EAFeatureItem alloc] initWithFocusView:self.exampleCell focusCornerRadius:0 focusInsets:UIEdgeInsetsZero];
 item.introduce = @"txt_feature_post_activity_4.1.png";
