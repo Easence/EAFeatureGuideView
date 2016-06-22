@@ -9,11 +9,11 @@
 #import "UIView+EAFeatureGuideView.h"
 
 typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
-    EAFeatureItemLocationDefault = 0,
-    EAFeatureItemLocationUp = 1 << 0,
-    EAFeatureItemLocationLeft = 1 << 1,
-    EAFeatureItemLocationDown = 1 << 2,
-    EAFeatureItemLocationRight = 1 << 3
+    EAFeatureItemLocationDefault = 1,
+    EAFeatureItemLocationUp = 1 << 1,
+    EAFeatureItemLocationLeft = 1 << 2,
+    EAFeatureItemLocationDown = 1 << 3,
+    EAFeatureItemLocationRight = 1 << 4
 };
 
 @import ObjectiveC.runtime;
