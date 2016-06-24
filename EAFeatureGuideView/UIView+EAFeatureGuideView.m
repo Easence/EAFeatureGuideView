@@ -9,7 +9,7 @@
 #import "UIView+EAFeatureGuideView.h"
 
 typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
-    EAFeatureItemLocationDefault = 1,
+    EAFeatureItemLocationDefault = 0,
     EAFeatureItemLocationUp = 1 << 1,
     EAFeatureItemLocationLeft = 1 << 2,
     EAFeatureItemLocationDown = 1 << 3,
@@ -252,7 +252,7 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
     const CGFloat verticalSpacing = 10;
     
     //箭头方向向上
-    if(location & EAFeatureItemLocationUp || location & EAFeatureItemLocationDefault)
+    if(location & EAFeatureItemLocationUp || location == EAFeatureItemLocationDefault)
     {
         //将箭头的锚点移动到顶部中间
         indicatorImageView.layer.anchorPoint = CGPointMake(.5f, 0);
