@@ -100,6 +100,15 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
     CGFloat topSpace = frame.origin.y;
     CGFloat bottomSpace = self.bounds.size.height - (frame.origin.y + frame.size.height);
     
+    if(featureItem.introduceAlignmentPriority == EAFeatureItemAlignmentBottomFirst)
+    {
+        location |= EAFeatureItemLocationUp;
+    }
+    else
+    {
+        location |= EAFeatureItemLocationDown;
+    }
+    
     //如果focusView的x轴上的宽占据了绝大部分则认为是横向居中的
     if(frame.size.width <= squareWidth * (split - 1))
     {
@@ -127,18 +136,6 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
         else if((bottomSpace - topSpace) >= squareHeight)
         {
             location |= EAFeatureItemLocationUp;
-        }
-        //如果上下距离接近相等
-        else if(fabs(bottomSpace - topSpace) <= 1)
-        {
-            if(featureItem.introduceAlignmentPriority == EAFeatureItemAlignmentBottomFirst)
-            {
-                location |= EAFeatureItemLocationUp;
-            }
-            else
-            {
-                location |= EAFeatureItemLocationDown;
-            }
         }
     }
     
