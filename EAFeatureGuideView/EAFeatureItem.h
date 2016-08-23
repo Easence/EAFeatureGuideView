@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 //单布局元素在界面上垂直居中时，是将介绍文案布局顶部，还是底部
 typedef NS_ENUM(NSUInteger, EAFeatureItemAlignmentPriority) {
     EAFeatureItemAlignmentBottomFirst, //底部优先
