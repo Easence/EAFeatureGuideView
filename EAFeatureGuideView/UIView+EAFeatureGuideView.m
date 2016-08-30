@@ -22,14 +22,29 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
 
 - (void)showWithFeatureItems:(NSArray<EAFeatureItem *> *)featureItems saveKeyName:(NSString *)keyName inVersion:(NSString *)version
 {
-    if([UIView hasShowFeatureGuideWithKey:keyName version:version])
-        return;
-    //
+//    if([UIView hasShowFeatureGuideWithKey:keyName version:version] || !self.window)
+//        return;
+//    
     [self dismissFeatureGuideView];
+
+    id observer = [self getRotationOberserver];
+    if(observer) {
+        [[NSNotificationCenter defaultCenter] removeObserver:observer];
+        [self setRotationOberserver:nil];
+    }
+    
+    [self setRotationOberserver:[[NSNotificationCenter defaultCenter] addObserverForName:UIDeviceOrientationDidChangeNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        
+        [[self getContainerView] removeFromSuperview];
+        [self setContainerView:nil];
+        [self layoutSubviewsWithFeatureItems:featureItems];
+        
+    }]];
+    
+    //
+    [self layoutSubviewsWithFeatureItems:featureItems];
     
     [self setKeyName:[NSString stringWithFormat:@"%@%@",keyName,version]];
-    
-    [self layoutSubviewsWithFeatureItems:featureItems];
     
 }
 
@@ -38,7 +53,7 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
     if(featureItems.count <= 0)
         return;
     
-    UIView *containerView = [[UIView alloc] initWithFrame:self.bounds];
+    UIView *containerView = [[UIView alloc] initWithFrame:self.window.bounds];
     containerView.backgroundColor = [UIColor clearColor];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchedEvent:)];
@@ -47,9 +62,9 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
     
     [self setContainerView:containerView];
     
-    [self addSubview :containerView];
+    [self.window addSubview :containerView];
     
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0,0,self.bounds.size.width, self.bounds.size.height)cornerRadius:0];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0,0,self.window.bounds.size.width, self.window.bounds.size.height)cornerRadius:0];
     
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     
@@ -92,13 +107,13 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
     const NSInteger split = 16;
     
     //将展示区域分割成16*16的区域
-    CGFloat squareWidth = self.bounds.size.width / split;
-    CGFloat squareHeight = self.bounds.size.height / split;
+    CGFloat squareWidth = self.window.bounds.size.width / split;
+    CGFloat squareHeight = self.window.bounds.size.height / split;
     
     CGFloat leftSpace = frame.origin.x;
-    CGFloat rightSpace = self.bounds.size.width - (frame.origin.x + frame.size.width);
+    CGFloat rightSpace = self.window.bounds.size.width - (frame.origin.x + frame.size.width);
     CGFloat topSpace = frame.origin.y;
-    CGFloat bottomSpace = self.bounds.size.height - (frame.origin.y + frame.size.height);
+    CGFloat bottomSpace = self.window.bounds.size.height - (frame.origin.y + frame.size.height);
     
     //如果focusView的x轴上的宽占据了绝大部分则认为是横向居中的
     if(frame.size.width <= squareWidth * (split - 1))
@@ -146,7 +161,7 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
     UIButton *button = nil;
     
     //绘制镂空的区域
-    CGRect featureItemFrame = featureItem.focusView ? [featureItem.focusView convertRect:featureItem.focusView.bounds toView:[self getContainerView]] : featureItem.focusRect;
+    CGRect featureItemFrame = featureItem.focusView ? [featureItem.focusView convertRect:featureItem.focusView.bounds toView:containerView] : featureItem.focusRect;
     
     CAShapeLayer *shapeLayer = (CAShapeLayer *)[containerView.layer.sublayers firstObject];
     
@@ -448,6 +463,12 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
 
 - (void)dismissFeatureGuideView
 {
+    id observer = [self getRotationOberserver];
+    if(observer) {
+        [[NSNotificationCenter defaultCenter] removeObserver:observer];
+        [self setRotationOberserver:nil];
+    }
+    
     if(![self getContainerView])
         return;
     
@@ -521,5 +542,15 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
 {
     return objc_getAssociatedObject(self, _cmd);
 }
+
+- (id)getRotationOberserver {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setRotationOberserver:(id)rotationOberserver
+{
+    objc_setAssociatedObject(self, @selector(getRotationOberserver), rotationOberserver, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 
 @end

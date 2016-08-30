@@ -26,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -89,6 +88,10 @@
     item8.introduce = @"txt_feature_post_activity_4.1.png";
     
     [self.navigationController.view showWithFeatureItems:@[item, item2,item3,item4,item5,item6, item8] saveKeyName:@"button" inVersion:nil];
+}
+
+- (void)dealloc {
+
 }
 
 @end
