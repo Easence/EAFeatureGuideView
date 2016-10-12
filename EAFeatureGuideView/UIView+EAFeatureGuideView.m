@@ -22,9 +22,9 @@ typedef NS_ENUM(NSUInteger, EAFeatureItemLocation) {
 
 - (void)showWithFeatureItems:(NSArray<EAFeatureItem *> *)featureItems saveKeyName:(NSString *)keyName inVersion:(NSString *)version
 {
-//    if([UIView hasShowFeatureGuideWithKey:keyName version:version] || !self.window)
-//        return;
-//    
+    if([UIView hasShowFeatureGuideWithKey:keyName version:version] || !self.window)
+        return;
+//
     [self dismissFeatureGuideView];
 
     id observer = [self getRotationOberserver];

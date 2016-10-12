@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EAFeatureGuideView"
-  s.version      = "1.0.8"
-  s.summary      = "A easy way to show feature guide with EAFeatureGuideView."
+  s.version      = "1.0.9"
+  s.summary      = "Relayout after iOS device did changed Orientation."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                      Relayout after iOS device did changed Orientation.
+                      An easy way to show feature guide with EAFeatureGuideView for iOS apps.
                    DESC
 
   s.homepage     = "https://github.com/Easence/EAFeatureGuideView"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Easence/EAFeatureGuideView.git", :tag => "1.0.8" }
+  s.source       = { :git => "https://github.com/Easence/EAFeatureGuideView.git", :tag => "1.0.9" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
