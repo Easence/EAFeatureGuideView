@@ -252,6 +252,7 @@
 				TargetAttributes = {
 					134B54C31CD053B600C5F8E0 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 38P99ZT46A;
 					};
 					134B54DC1CD053B600C5F8E0 = {
 						CreatedOnToolsVersion = 7.3;
@@ -466,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 38P99ZT46A;
 				INFOPLIST_FILE = EAFeatureGuideDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_GENERATE_MAP_FILE = YES;
@@ -479,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 38P99ZT46A;
 				INFOPLIST_FILE = EAFeatureGuideDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_GENERATE_MAP_FILE = YES;
